@@ -1,0 +1,67 @@
+import enum
+import random
+
+# Define an enumeration for the days of the week
+class BossNumber(enum.Enum):
+    Vorago = 1
+    Solak = 2
+    Barrows6 = 3
+    Rax = 4
+    KalphiteKing = 5
+    WildyWyrm = 6
+    QueenBlackDragon = 7
+    CorporealBeast = 8
+    TheMagister = 9
+    Raksha = 10
+    NexAoD = 11
+    Nex = 12
+    Kril = 13
+    Graardor = 14
+    Zilyana = 15
+    Kreeara = 16
+    Telos = 17
+    Gregorovic = 18
+    Helwyr = 19
+    Vindicta = 20
+    TwinFuries = 21
+    Kerapac = 22
+    ArchGlacor =23
+    Croesus = 24
+    Zuk = 25
+    ED1 = 26
+    ED2 = 27
+    ED3 = 28
+    ED4 = 29
+    Hermod = 30
+    Rasial = 31
+    RexMatriarchs = 32
+    DagannothKings = 33
+    MonasteryofAscension = 34
+    KalphiteQueen = 35
+    ChaosElemental = 36
+    KingBlackDragon = 37
+    GiantMole = 38
+    Raids = 39
+
+
+# Generate a random number between 1 and 39 (inclusive) to represent a boss
+random_boss_number = random.randint(1, 39)
+
+# Initialize random_kc_number
+random_kc_number = None
+
+# Convert the random boss number to a boss name using the enumeration
+try:
+    random_boss = BossNumber(random_boss_number)
+    print(f"Randomly selected boss: {random_boss.name}")
+
+    # Generate a random kill count (KC) between 1 and 30 (inclusive)
+    random_kc_number = random.randint(1, 30)
+except ValueError:
+    print("Invalid boss generated.")
+
+# Check if random_kc_number was generated and print it
+if random_kc_number is not None:
+    print(f"Randomly generated KC for {random_boss.name}: {random_kc_number}")
+
+
